@@ -15,7 +15,7 @@
 // 1、设置前一阶走法preStep，当前阶走法footCount；
 // 2、初始化第0阶走法为0、第1阶走法为1
 // 3、每阶走法总计为nowStep = preStep + footCount
-// 4、算出新走法后，footCount原来的数值成为前一阶走法，赋值于preStep，nowStep赋值于stepCount
+// 4、算出新走法后，footCount原来的数值成为前一阶走法，赋值于preStep，nowStep赋值于footCount
 
 var climbStairs = function(n) {
     let preStep = 0;
