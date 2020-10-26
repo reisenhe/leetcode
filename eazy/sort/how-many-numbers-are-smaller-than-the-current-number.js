@@ -5,10 +5,10 @@
 // 输出：[4,0,1,1,3
 
 // 思路: 
-1、使用另一个数组存放值 val 与索引 index
-2、将这个数组以 val 大小进行排序
-3、遍历该排序后数组 data ，每个元素的 i 和 index (原顺序) 提供于答案数组
-4、答案数组 ans 的第 index 位的值将是 i
+// 1、使用另一个数组存放值 val 与索引 index
+// 2、将这个数组以 val 大小进行排序
+// 3、遍历该排序后数组 data ，每个元素的 i 和 index (原顺序) 提供于答案数组
+// 4、答案数组 ans 的第 index 位的值将是 i
 
 var smallerNumbersThanCurrent = function(nums) {
     let data = [];
