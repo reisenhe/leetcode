@@ -1,4 +1,4 @@
-// 给定一个二叉树，返回它的中序 遍历。
+// 给定一个二叉树，返回它的 中序 遍历。
 
 function TreeNode(val, left, right) {
     this.val = val || 0;
