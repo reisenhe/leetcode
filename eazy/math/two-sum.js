@@ -12,14 +12,28 @@ var twoSum = function(nums, target) {
     // }
 
     // 解法优化-第二轮循环时不循环前一个索引
-    for (let i = 0; i < nums.length - 1; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            let numA = nums[i]
-            let numB = nums[j]
-            if (numA + numB == target) {
-                return [i, j]
-            }
+    // for (let i = 0; i < nums.length - 1; i++) {
+    //     for (let j = i + 1; j < nums.length; j++) {
+    //         let numA = nums[i]
+    //         let numB = nums[j]
+    //         if (numA + numB == target) {
+    //             return [i, j]
+    //         }
+    //     }
+    // }
+    // return false
+
+    // 解法优化-使用哈希存储，判断值是否存在
+    let hashTable = {};
+    for (let i = 0; i < nums.length; i++) {
+        let item = nums[i];
+        let less = target - item
+        if (hashTable[less] !== undefined) {
+            return [hashTable[less], i]
+        } else {
+            hashTable[item] = i
         }
     }
-    return false
 };
+
+console.log(twoSum([2,7,11,15], 9))
