@@ -11,11 +11,40 @@
         background-color: #444; 
         color: #fff;
     }
+    .switchBtn{
+        position: relative;
+        border: 1px solid #e5e5e5;
+        background-color: #e8e8e8;
+        height: 50px;
+        cursor: pointer;
+    }
+    .switchBtn::before{
+        position: absolute;
+        z-index: 2;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background-color: #fff;
+        transition: left 100ms ease-in;
+    }
+    .switchBtn::after{
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 50%;
+        background-color: coral;
+    }
+    .switchBtn:hover::before{
+        left: 50%;
+    }
     </style>
 </head>
 <body>
     <div id="div" draggable="true">这是div</div>
     <input id="input1" type="text">
+    <div class="switchBtn"></div>
 </body>
 <!-- <script src="./eazy/tree/binary-tree-inorder-traversal.js"></script> -->
 <!-- <script src="./mid/dynamic-programming/container-with-most-water.js"></script> -->
@@ -30,7 +59,8 @@
 <!-- <script src="./eazy/tree/diameter-of-binary-tree.js"></script> -->
 <!-- <script src="./mid/backtracking/restore-ip-addresses.js"></script> -->
 <!-- <script src="./mid/linked-list/reorder-list.js"></script> -->
-<script src="./mid/linked-list/reverse-linked-list-ii.js"></script>
+<!-- <script src="./mid/linked-list/reverse-linked-list-ii.js"></script> -->
+<script src="./mid/linked-list/remove-nth-node-from-end-of-list.js"></script>
 <!-- <script src="./mid/string/palindromic-substrings.js"></script> -->
 <script>
 </script>
