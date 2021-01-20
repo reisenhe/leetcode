@@ -28,3 +28,21 @@ var convertToTitle = function(n) {
     }
     return ans.toUpperCase()
 };
+
+// 迭代法：
+// 1. 使用 while 循环，以 n > 0 作条件 
+// 2. 每轮开始使用 n--，取值思路和上一段一致，使用求余数获取当前值
+// 3. 使用除法求剩余值，并赋值于 n
+let convert2 = function(n) {
+    let arr = []
+    while(n > 0) {
+        n--
+        arr.unshift(letters[n % 26])
+        let times = Math.floor(n / 26)
+        n = times
+    }
+    return arr.join('').toUpperCase()
+}
+
+let n = 26*27+1
+console.log(convert2(n))
